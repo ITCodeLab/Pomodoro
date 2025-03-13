@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Pomodoro Timer Section -->
+        <div class="timer-container">
+            <h1>Pomodoro Timer</h1>
+            <div class="timer">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            <button id="start">Start</button>
+            <button id="reset">Reset</button>
+            <div class="task-section">
+                <input type="text" id="task" placeholder="Enter task">
+                <button id="addTask"><i class="fas fa-arrow-right"></i></button>
+            </div>
+            <div class="analytics">
+                <!-- <h2>Analytics</h2> -->
+                <p>Pomodoro Count: <span id="completed">0</span></p>
+                <p>Pomodoro Total: <span id="totalTime">0</span> min</p>
+            </div>
+        </div>
+
+        <!-- Task History Section -->
+        <div class="task-history-container">
+            <h2>Task History <img src="logo/reset.png" alt="Reset" id="clearHistoryIcon" style="width: 20px; height: 20px; cursor: pointer;"></h2>
+            <ul id="taskList"></ul>            
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <h2 id="modal-title">Break Time!</h2>
+          <p id="modal-timer"></p>
+        </div>
+    </div>    
+
+    <script src="script.js"></script>
+</body>
+</html>
