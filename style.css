@@ -87,8 +87,13 @@ button {
 }
 
 #reset {
-    background-color: #255F38;
+    background-color: #1F7D53;
     color: #ffffff;
+}
+#reset:hover,
+#start:hover,
+#addTask:hover {
+    background-color: #255F38;
 }
 
 .modal {
@@ -158,6 +163,21 @@ button {
     color: #ccc;
 }
 
+#subtractTime,
+#addTime {
+    position: relative;
+    top: -10px; /* Adjust the value to move the buttons higher or lower */
+    font-size: 14px; /* Decrease font size */
+    padding: 5px 10px; /* Reduce button size */
+    width: 30px; /* Set width */
+    height: 30px; /* Set height */
+}
+
+#subtractTime:hover,
+#addTime:hover {
+    background-color: #45a049; /* Darker green */
+}
+
 @media screen and (max-width: 768px) {
     .main-container {
         display: flex;
@@ -171,8 +191,8 @@ button {
     .timer-container,
     .task-history-container {
         max-height: 400px; /* Prevent overflow */
-        width: 110%;
-        margin-bottom: 10px;
+        width: 100%;
+        margin: 10px;
     }
 
     #taskList {
@@ -193,6 +213,6 @@ button {
     }
 
     input {
-        width: 100%; /* Input takes full width */
+        width: 60%; /* Input takes full width */
     }
 }

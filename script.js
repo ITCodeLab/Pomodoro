@@ -15,10 +15,26 @@ const totalTimeDisplay = document.getElementById("totalTime");
 const taskInput = document.getElementById("task");
 const addTaskButton = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
+const addTimeButton = document.getElementById("addTime");
+const subtractTimeButton = document.getElementById("subtractTime");
 
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modal-title");
 const modalTimerDisplay = document.getElementById("modal-timer");
+
+addTimeButton.addEventListener("click", () => {
+  if (!isRunning) {
+      minutes += 5;
+      updateDisplay();
+  }
+});
+
+subtractTimeButton.addEventListener("click", () => {
+  if (!isRunning && minutes >= 5) {
+      minutes -= 5;
+      updateDisplay();
+  }
+});
 
 function updateDisplay() {
   minutesDisplay.textContent = String(minutes).padStart(2, "0");
